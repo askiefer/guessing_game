@@ -6,19 +6,23 @@ number = randint(1,100)
 
 print "Howdy, %s! I'm thinking of a number between 1 and 100." %(str(name))
 
-guess = int(raw_input("What's your guess?"))
+def new_guess():
+    while True:
+        try:
+            guess = int(raw_input("What's your guess?"))
+            break
+        except ValueError:
+            print "Dummy! That's not an integer! Try again."
+    return guess 
 
-while guess != number: 
+while True: 
+    guess = new_guess()
     if guess < 1 or guess > 100:
         print "You are dumb. Try again." 
-        guess = int(raw_input("What's your guess?"))
     elif guess > number:
         print "You guessed too high!"
-        guess = int(raw_input("What's your guess?"))
-    else:
+    elif guess < number:
         print "You guessed too low!"
-        guess = int(raw_input("What's your guess?"))
-
-if guess == number: 
-    print "You guessed it! Good job!"
-
+    else:
+        print "You guessed it! Good job!"
+        break
