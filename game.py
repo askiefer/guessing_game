@@ -7,7 +7,7 @@ best_score = None
 
 from random import randint
 
-#greeting 
+#greeting to the user 
 print "Howdy, %s! I'm thinking of a number between 1 and 100." %(str(name))
 
 #function that chooses a number between 1 and 100
