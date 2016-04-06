@@ -10,8 +10,6 @@ from random import randint
 #greeting 
 print "Howdy, %s! I'm thinking of a number between 1 and 100." %(str(name))
 
-
-
 #function that chooses a number between 1 and 100
 def pick_number():
     number = randint(1,100)
@@ -29,7 +27,6 @@ def new_guess():
             print "Dummy! That's not an integer! Try again."
     return guess 
     
-
 #feedback on guesses until game is won
 while True: 
     guess = new_guess()
